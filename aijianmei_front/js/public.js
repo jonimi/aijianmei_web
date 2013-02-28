@@ -38,7 +38,6 @@ $(function(){
 			}
 		}
 	});
-	
 					
 })
 
@@ -89,7 +88,7 @@ $(function(){
 	var move = function(index){
 		var nowleft = -index*sWidth;
 		$("#banner .ul_1").stop(true,false).animate({"left":nowleft},300);
-		$("#banner .ul_2 li").css("border","3px solid transparent").eq(index).css("border","3px solid yellow");
+		$("#banner .ul_2 li").css("border","3px solid transparent").eq(index).css("border","3px solid #4298CE");
 	}
 
 	//透明效果
@@ -152,7 +151,150 @@ $(function(){
 			$(".more>ul").hide();
 		})		
 	})
-
+	
+//导航栏样式改变	
+	$("#nav").children().click(function(){
+		if(!($(this).hasClass("home"))){
+			$(this).css("background","#2E6A92")
+		}
+		$(this).siblings().css("background","");
+	})
+		
 					
-})		
+})
 
+
+
+//js for border
+			// var addevent = function(element,type,handle){
+			// 	if(element.addEventListener){
+			// 		element.addEventListener(type,handle,false)
+			// 	}
+			// 	if(element.attachEvent){
+			// 		element.attachEvent("on" + type,handle)
+			// 	} 
+			// }
+			var getdom = function(){
+				this.$ = function(id){
+					return document.getElementById(id);
+				}
+
+				this.getElementsByClass = function(searchClass,node,tag) {
+			        var classElements = new Array();
+			        if ( node == null )
+			                node = document;
+			        if ( tag == null )
+			                tag = '*';
+			        var els = node.getElementsByTagName(tag);
+			        var elsLen = els.length;
+			        var pattern = new RegExp("(^|\\s)"+searchClass+"(\\s|$)");
+			        for (i = 0, j = 0; i < elsLen; i++) {
+			                if ( pattern.test(els[i].className) ) {
+			                        classElements[j] = els[i];
+			                        j++;
+			                }
+			        }
+			        return classElements;
+			    }
+			}
+
+			var getaction = function(classname,obj){
+				var newdom = new getdom,
+					classname = newdom.getElementsByClass(classname);	
+				
+				var defaule = {
+					'color': obj.choicecolor ? obj.choicecolor : '#D273FF',
+					'borderwidth':obj.choiceborderwidth ? obj.choiceborderwidth : '3px'
+				}
+
+				//获取对象索引号
+				var getindex = function(obj){
+					for(var i = 0;i < classname.length;i++){
+						switch(obj){
+							case classname[i]:return i;
+							break;
+						}
+						
+					}
+				}
+				var getborder = function(num){
+					for(var i = 0;i <　classname.length;i++){
+						if(i == num){
+							classname[num].style.borderColor = defaule.color;
+							classname[num].style.borderWidth = defaule.borderwidth;
+							classname[num].style.borderStyle = 'solid'
+						}
+					}
+						
+				}
+				var clearborder = function(num){
+					for(var i = 0;i <　classname.length;i++){
+						if(i == num){
+							classname[num].style.borderColor = '';
+							classname[num].style.borderWidth = '';
+						}
+					}
+						
+				}
+
+				for(var i = 0;i <　classname.length;i++){
+					classname[i].onmouseover = function(){
+						var index = getindex(this);
+							getborder(index)
+					}
+					classname[i].onmouseout = function(){
+						var index = getindex(this);
+							clearborder(index)
+					}
+				}
+					
+			}
+			var changecolor = function(obj,color,childcolor){
+					var newgetdom = new getdom,
+						target = newgetdom.getElementsByClass(obj);
+						
+						for(var i = 0;i < target.length;i++){
+							target[i].onmouseover = function(){
+								this.style.background = color;
+								if(this.childNodes[0]){
+									var targetchlid = this.childNodes[0];
+									targetchlid.style.color = childcolor;
+								}
+								
+									
+							}
+							target[i].onmouseout = function(){
+								this.style.background = '';
+								if(this.childNodes[0]){
+									var targetchlid = this.childNodes[0];
+									targetchlid.style.color = ''
+								}
+								
+							}		
+						}
+							
+			}
+			// var changebutton = function(obj,url,num){
+
+			// 	var newdom = new getdom,
+			// 		id = newdom.getElementsByClass(obj),
+			// 		image = id.style.backgroundImage;
+			// 		var currentpositionY = id.style.backgroundPositionY;
+			// 	id.onmouseover = function(){
+			// 		if(num != null){
+			// 			this.style.background = 'url('+url+')';
+			// 			this.style.backgroundPositionX = '0px';
+			// 			this.style.backgroundPositionY = num;
+						
+			// 		}					
+			// 		else{
+			// 			this.style.background = 'url('+url+')';
+			// 		}
+			// 		// console.log(this.style.backgroundPosition)			
+			// 	}
+			// 	id.onmouseout = function(){
+			// 		this.style.backgroundImage = image;
+			// 		this.style.backgroundPositionX = '0px'
+			// 		this.style.backgroundPositionY = currentpositionY;
+			// 	}
+			// }

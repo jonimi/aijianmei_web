@@ -3,24 +3,21 @@
 }
 
 	.sider{
-		width:140px;
-		float:left;
 		margin:40px 20px;
 	}
 	/********** 全部 ***********/
 
-		.sider .sub_plan,.plan{
+		.sub_plan,.plan{
 			height: 30px;
-			border-bottom: 1px solid #E5E5E5;
 			line-height: 30px;
 			padding-left: 20px;
 		}
-			.sider .sub_plan a{
+			.sub_plan a{
 				display: block;
 				color: #51639E;
 				cursor:pointer;
 			}
-			.sider .sub_plan a:hover{
+			.sub_plan a:hover{
 				text-decoration:underline;
 				font-weight:bold;
 			}
@@ -33,17 +30,31 @@
 		margin:10px;
 		display:inline-block;
 	}
-	.content hr{
-		display:inline-block;
-		background:#C6DAE5;
-		height:2px;
-		border:0;
-		width:450px;
-	}
-	.content .step{
-		height:280px;
+		.train .sort{
+			float: left;
+			width: 170px;
+			margin: 12px;
+		}
+			.sort .show_pic{
+				width:170px;
+				height:130px;
+				border-radius:8px;
+				box-shadow:0 0 8px #ccc;
+			}
+			.sort .sort_title{
+				text-align:center;
+				font-size:16px;
+				font-weight:bold;
+				margin:5px;
+			}
+			.sort .sub_sort{
+				display:block;
+				padding:2px;
+				font-size:13px;
+			}
+	.step{	
 		width:725px;
-		margin:0 auto;
+		margin:20px auto;
 	}
 		#choice{
 			background:url(../images/store_bg.png) no-repeat;
@@ -74,8 +85,7 @@
 					font-size:16px;
 					width:220px;
 					margin:0 auto;
-				}
-				
+				}				
 			.steps_wrap{
 				width:480px;
 				display:inline-block;
@@ -84,8 +94,7 @@
 					float:left;
 					margin-right:1px;
 					width:30px;
-					height:256px;
-					
+					height:256px;					
 				}
 					.steps_ul .opt{
 						display:inline-block;
@@ -96,7 +105,7 @@
 						height:256px;
 						background:url(../images/plan/list.png) no-repeat center;
 					}
-					
+				
 				.steps_list2 .options,.steps_list3 .options{
 					display:none;
 				}	
@@ -231,105 +240,95 @@
 						display:inline-block;
 
 					}
-	.content .find{
-		width:730px;
+
+	#show_hide{
+		width:800px;
 		height:210px;
 	}
-	.content .exer{
-		display:inline-block;
-		width:350px;
-		height:200px;
+	.exer{
 		margin-right:20px;
 	}
-	.content .gym{
+	.lay{
+		width:375px;
+		margin-bottom: 5px;
+		border: 1px solid #91BFE0;
+		background: #E6F0F7;
+	}
+	.gym,.exer{
+		position:relative;
 		display:inline-block;
-		width:350px;
-		height:200px;
+		width:383px;
+		background: #D7DBDD;
 	}
 	.exer img, .gym img{
-		width:340px;
+		display:block;
+		width:375px;
 		height:145px;
 	}
 		.exer hr ,.gym hr{
 			width:230px;
 		}
 		
-	.content .example a{
+	.example a{
 		display:inline-block;
 		width:230px;
-		margin-right:10px;
+		margin:12px 14px;
 	}
-		.content .example img{
+		.example img{
 			width:230px;
 		}
-		.content .line{
+		.line{
 			width:620px;
 		}
 		
 /******** 寻找教练 ********/
-.arae{
-	margin-top:20px;
+.inform_content{
+position: relative;
+float:left;
+width:348px;
+margin:20px 10px;
+padding:18px 10px;
+font-weight: 600;
+border: 1px solid #CCC;
+background: white;
 }
-.per{
-	margin-left:20px;
+.inform_pic{
+float: left;
 }
-#province,#city,#town{
-	width:120px;
-	font-size:20px;
-	margin:10px 20px;
+.inform{
+float:right;
+width:266px;
+height:70px;
 }
-.coach,.sub_gym{
-	width:570px;
-	height:115px;
-	margin:40px 20px;
+.inform p,.inform span{
+	color:black;
 }
-.coach .info,.sub_gym .info{
-	float:right;
-	padding-right:50px;
-	list-style:disc;
+.detail{
+	position: absolute;
+display: inline-block;
+right: 8px;
+bottom: 8px;
+width: 120px;
+height: 28px;
+text-align: center;
+line-height: 28px;
+background: url(../images/jllb_01.png) no-repeat;
 }
-.pic{
-	float:left;
-	width:288px;
-	height:114px;
-}
-.info .name{
-	font-size:18px;
-	color:#3480A8;
-	list-style:none;
-	font-weight:bold;
-	line-height:30px;
-}
-.info .expert{
-	line-height:25px;
-}
-.info .qualifition{
-	line-height:25px;
-}
-.info .graduation{
-	line-height:25px;
-	color:chocolate;
-}
+
 /****** 寻找健身房 ******/
-
-.sub_gym{
-	width:730px;
-	margin:20px <0></0>;
+.detail_1{
+	position: absolute;
+display: inline-block;
+right: 8px;
+bottom: 40px;
+width: 83px;
+height: 29px;
+text-align: center;
+line-height: 29px;
+color: white;
+background: url(../images/jllb_03.png) no-repeat;
 }
 
-	/****** 翻页 *****/
-	.page{
-		margin:15px;
-		text-align:center;
-	}
-		.prev,.next{
-			width:60px;
-			height:20px;
-		}
-		.record{
-			display:inline-block;
-			margin:0 3px;
-		}
 
 /******** loss_step *******/
 .loss_step{
@@ -397,6 +396,31 @@
 }
 .m_l_t{
 	background:url(../images/plan/m1.png) no-repeat center;
+}
+.m_l_a{
+	background:url(../images/plan/m3.png) no-repeat center;
+}
+.m_l_o{
+	background:url(../images/plan/m5.png) no-repeat center;
+}
+
+/******** female loss age *********/
+.f_l_t{
+	background:url(../images/plan/f1.png) no-repeat center;
+}
+.f_l_a{
+	background:url(../images/plan/f3.png) no-repeat center;
+}
+.f_l_o{
+	background:url(../images/plan/f5.png) no-repeat center;
+}
+
+
+
+
+
+
+:url(../images/plan/m1.png) no-repeat center;
 }
 .m_l_a{
 	background:url(../images/plan/m3.png) no-repeat center;

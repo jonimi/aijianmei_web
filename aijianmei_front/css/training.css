@@ -1,16 +1,3 @@
-.clearfix {
-
-	}
-	.clearfix:before {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	clear: both
-	}
-	a{cursor:pointer;}
 /***********************content开始*************************/
 	/*#banner切换图片独立部分*/
 	#banner{
@@ -21,34 +8,7 @@
 	#content{
 		padding-top: 15px;
 	}
-	/*左边导航栏*/	
-	.left_sub{
-		float:left;
-		width:157px;
-	}
-	.title_1{
-		margin-right: 30px;
-		padding-bottom: 6px;
-		font-size: 16px;
-		border-bottom: 1px solid #CCC;
-	}
-	.all{
-		font-size: 16px;
-		color:black;
-		font-weight: 600;
-	}
-	.each_video{
-		margin-right: 30px;
-		padding-left: 11px;
-		line-height: 32px;
-		font-size: 13px;
-		border-bottom: 1px solid #CCC;
-	}
-	.right_training{
-		float:left;
-		width:703px;
-	}
-	/*左边导航栏*/		
+	/*左边导航栏结束*/		
 	.training{
 		float:left;
 		width:760px;
@@ -57,23 +17,6 @@
 		color: gray;
 	}
 			/**training公共选择器部分**/
-			.training .hr{
-				display: inline-block;
-				float: right;
-				height:0px;
-				margin-top: 14px;
-				border: 1px solid #70BDFA;
-				*margin-top: -14px;//for ie8
-			}
-			.training .hr_1{width: 78%;}
-			.training .hr_2{width: 79%;}
-			.training .hr_3{width: 79%;}
-			.training .hr_4{width: 85%;}
-			.training .title{
-				margin: 10px 0;
-				font-size: 22px;
-				color: black;
-			}
 			.show_pic{
 				float: left;
 				margin: 10px 64px 0 30px;
@@ -385,7 +328,6 @@ margin-bottom: 20px;
 	}
 	.all .all_ul{
 		border-bottom:1px solid #E5E5E5;
-		width:740px;
 		margin:0 auto;
 	}
 	/****** 选择分类 ********/

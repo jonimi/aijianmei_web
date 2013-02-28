@@ -94,50 +94,50 @@ a:hover{
 							font-weight: 700;
 							border: 1px solid #CCC;
 						}
-				.box_1 .prompt_box_1{
+				.prompt_box_1,.prompt1_box_1{
 					position: relative;
 					top: -30px;
 					left: 496px;
 					font-size: 13px;
 					color:gray;
 				}
-				.box_1 .prompt_box_1 span{
+				.prompt_box_1 span,.prompt1_box_1 span{
 					color:red;
 					font-size: 13px;
 				}
-				.box_2 .prompt_box_2{
+				.prompt_box_2,.prompt1_box_2{
 					position: relative;
 					top: -55px;
 					left: 496px;
 				}
-				.box_2 .prompt_box_2 p{
+				.prompt_box_2 p,.prompt1_box_2 p{
 					line-height: 24px;
 					font-size: 13px;
 					color:gray;
 				}
-				.box_2 .prompt_box_2 .error_form{
+				.error_form{
 					display:block;
 					margin-top:25px;
 					color:red;
 					font-size: 13px;
 				}
-				.box_2 .prompt_box_2 .rank{
+				.rank{
 					display:block;
 					margin-top:25px;
 					color:#DB7200;
 					font-size: 13px;
 				}
-				.box_2 .prompt_box_2 .w_s{
+				.w_s{
 					display: block;
 				}
-				.box_3 .prompt_box_3{
+				.prompt_box_3,.prompt1_box_3{
 					position: relative;
 					top: -30px;
 					left: 496px;
 					font-size:13px;
 					color:gray;
 				}
-				.box_4 .prompt_box_4{
+				.prompt_box_4,.prompt1_box_4{
 					position: relative;
 					top: -30px;
 					left: 496px;
@@ -213,6 +213,7 @@ a:hover{
 				}
 				.box_10{
 					margin-left: 140px;
+					margin-bottom: 10px;
 				}
 				.box_10 .submit_1{
 					display: inline-block;
@@ -226,7 +227,7 @@ a:hover{
 					border-radius: 6px;
 					cursor:pointer;
 				}			
-				.box_10 .open{
+				.open,.open_1{
 					display: inline-block;
 					width: 195px;
 					height: 58px;

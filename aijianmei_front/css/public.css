@@ -12,7 +12,7 @@ img{
 body{
 	font:14px Tahoma Arial,Helvetica,sans-serif;
 	color:#656565;
-	background:url(../images/b_g.png);	
+	background:url(../images/b_g.jpg) repeat;	
 }
 ul{
 	list-style:none;
@@ -20,6 +20,7 @@ ul{
 a{
 	text-decoration:none;
 	color:#656565;
+	cursor:pointer;
 }
 a:hover{
 	color:#47AEE8;
@@ -164,20 +165,12 @@ a:hover{
 		.accounts .cop6:hover{
 			background:url(../images/login.png) no-repeat 0 -44px;
 		}
-
-		
-
-
-
-
 .wrapper{
 	width:980px;
 	margin:0 auto;
-	background:white;
+	background:#f7f7f7;
+	box-shadow: 0 0 5px 0 silver;
 }
-
-
-
 /******* clearfix ********/
 .clearfix:after{
 	content:"";
@@ -198,7 +191,7 @@ a:hover{
 		height:0;
 		font-size:0;
 		line-height:0;
-		border-color:#BCBCBC #fff #fff #fff;
+		border-color:#BCBCBC #f7f7f7 #f7f7f7 #f7f7f7;
 		border-style:solid;
 		border-width:5px;
 		margin-top:-2px;
@@ -261,6 +254,7 @@ a:hover{
 			display:block;
 			line-height:20px;
 			width:80px;
+			font-size:12px;
 		}
 		.top .message li a:hover,.top .account li a:hover{
 			background:#ccc;
@@ -365,6 +359,7 @@ a:hover{
 		
 		
 		.lay_banner{
+			position:relative;
 			margin: 0 auto;
 			width: 860px;
 			height:270px;
@@ -407,6 +402,7 @@ a:hover{
 				width: 180px;
 				padding: 0 20px;
 				opacity: 0.3;
+				filter:alpha(opacity=30);
 				background: #020200;
 			}
 				.massage .title{
@@ -446,9 +442,8 @@ a:hover{
 			border: 3px solid transparent;
 
 		}
-		.choice_area .first_choice{border: 3px solid yellow;}
-		.choice_area .relative{
-			
+		.choice_area .first_choice{
+			border: 3px solid #4298CE;
 		}
 			.ps_left{position: absolute;
 				display: inline-block;
@@ -461,16 +456,9 @@ a:hover{
 				width: 40px;
 				height: 80px;
 				top: 12px;
-				right: 10px;background: url(../images/turn_right.png) no-repeat;}
-		
-		
-		
-		
-		
-		
-		
-		
-		
+				right: 10px;background: url(../images/turn_right.png) no-repeat;
+			}
+
 /******** Footer link *********/	
 	#footer{
 		height:195px;
@@ -489,7 +477,6 @@ a:hover{
 			margin:40px 30px;
 			_margin-left:15px;
 			padding:0 15px;
-
 		}
 			.f_list  ul li a{
 				font-size:12px;
@@ -545,11 +532,9 @@ a:hover{
 			#lower_footer span,#lower_footer a{
 				display:block;
 			}
-
 .now_position{
 	background:#2E6A92;
 }	
-
 /****** 翻页 *****/
 .page{
 	margin:15px;
@@ -572,6 +557,110 @@ a:hover{
 		color:white;
 	}
 
-
-	
-	
+	/*底部汇总导航栏*/
+		.title_4{
+			padding: 5px 0 5px 10px;
+			margin: 5px 0;
+			font-size: 16px;
+			background: #CCC;
+		}
+		.re_nav li{
+			float: left;
+			width: 326px;
+			margin-right: 3px;
+			padding: 10px;
+			font-size: 13px;
+			font-weight: 700;
+			border-bottom: 1px dotted #CCC;
+		}
+		.re_nav li a{
+			color:#0E709A;
+		}
+		/*底部汇总导航栏*/
+		.title_4{
+			padding: 5px 0 5px 10px;
+			margin: 5px 0;
+			font-size: 16px;
+			background: #CCC;
+		}
+		.re_nav li{
+			float: left;
+			width: 326px;
+			margin-right: 12px;
+			padding: 10px;
+			font-size: 13px;
+			font-weight: 700;
+			border-bottom: 1px dotted #CCC;
+		}
+		.re_nav li a{
+			color:#0E709A;
+		}
+	/*内容横条样式*/
+	#content{
+		margin-top: 10px;
+	}
+			.public_title{
+				padding-left: 20px;
+				font-size: 26px;
+				line-height: 34px;
+				height: 34px;
+				color: #656565;
+				background: url(../images/thbg.jpg) repeat-x;
+			}
+			.right_sider{
+				float:left;
+				width:790px;
+				border: #E0E0E0 1px solid;
+			}
+			.part_top{
+				position: relative;
+				margin-bottom: 10px;
+				padding-bottom: 1px;
+			}
+			.lay_top{
+				width:783px;
+				margin-bottom: 5px;
+				background: #FFF;
+			}
+	/*导航栏共用样式*/
+			.sider_all{
+				position: relative;
+				float: left;
+				width: 135px;
+				margin: 0 10px 0 25px;
+				background: url(../images/siderBg.jpg) repeat-y right top;
+			}
+			.border_line{
+				display:block;
+				width:134px;
+				height:2px;
+				background:url(../images/border.jpg) right top no-repeat;
+			}
+			.sider_all .video_all{
+				display: block;
+				margin: 0;
+				color: #000B00;
+				height: 30px;
+				line-height: 30px;
+				padding-left: 10px;
+			}
+	/*左边导航栏*/	
+	.title_1{
+		margin-right: 30px;
+		padding-bottom: 6px;
+		font-size: 16px;
+	}
+	.all{
+		font-size: 16px;
+		color:black;
+		font-weight: 600;
+	}
+	.each_video{
+		line-height: 32px;
+		font-size: 13px;
+		padding-left:20px;
+	}
+	.right_training{
+		float:left;
+		width:703px;
+	}

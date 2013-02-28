@@ -1,4 +1,4 @@
-.clearfix {
+/*.clearfix {
 
 	}
 	.clearfix:before {
@@ -18,21 +18,27 @@
 	background: white;
 }
 /***********************content开始*************************/
-#content{
+/*#content{
 	margin: 20px 0px;
 }
 
 /**********右边主要内容部分**********/
-		.right_sider{
+/*		.right_sider{
 			float:left;
-			width:785px;
+			width:790px;
 		}
 	
 		.part_top{
+			position: relative;
 			margin-bottom: 10px;
 			padding-bottom: 1px;
-			background: #e6f0f7;
+			background: #D7DBDD;
 		}
+		.lay_top{
+			width:783px;
+			margin-bottom: 5px;
+			background: #e6f0f7;
+		}*/
 		.content{
 			margin:10px;
 		}
@@ -105,7 +111,7 @@
 			.produce .price{
 				font-weight: 600;
 				color: red;
-				background: #CCC;				
+				background: #b5b5b5;				
 			}
 	/*商店三级页面的css*/
 	.right_sider .bottom{
@@ -147,19 +153,39 @@
 
 /************ Sider *************/
 .sider{
+	position: relative;
 	float: left;
 	width: 135px;
-	height: 800px;
 	margin: 0 10px 0 25px;
+	background: #D7DBDD;
+}
+
+.corner_left{
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	width: 5px;
+	height: 5px;
+	background: url(../images/bk_02.jpg) no-repeat;
+}
+.corner_bottom{
+	display: inline-block;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 5px;
+	height: 5px;
+	background: url(../images/bk_03.jpg) no-repeat;
 }
 .sider .video{
 	border-bottom: 1px solid #C6C6C6;
 	display: block;
 	margin: 0;
 	color: #000B00;
-	height: 30px;
-	line-height: 30px;
+	height: 33px;
+	line-height: 33px;
 	padding-left: 10px;
+	background: url(../images/bk_31.jpg) repeat-x;
 }
 	.sider .all{
 		line-height: 30px;
@@ -181,11 +207,12 @@
 				color: #52619D;
 			}
 			.sub_kind{
-				padding-left:20px;
+				padding-left:8px;
 			}
 			.sub_kind a{
 				color:#52619D;
 				font-size:13px;
+				word-break: break-all;
 			}
 			.sub_kind a:hover{
 				text-decoration:underline;
@@ -276,12 +303,14 @@
 			height:80px;
 		}
 		.choice_area li{
+			position: relative;
 			float: left;
 			display: inline-block;
 			height: 80px;
 			width: 128px;
 			margin: 12px 15px;
 			cursor: pointer;
+			z-index: 100;
 			border: 3px solid transparent;
 
 		}
@@ -295,6 +324,7 @@
 				height: 80px;
 				top: 16px;
 				left: 10px;
+				z-index: 100;
 				background: url(../images/turn_left.png) no-repeat;}
 			.ps_right{position: absolute;
 				display: inline-block;
@@ -302,6 +332,7 @@
 				height: 80px;
 				top: 16px;
 				right: 10px;
+				z-index: 100;
 				background: url(../images/turn_right.png) no-repeat;}
 			.cover{
 				position: absolute;
@@ -313,19 +344,7 @@
 				background: black;
 			}
 
-			/*试改横条样式*/
-			.public_package{
-				height: 34px;
-				background: url(../images/ht_01.jpg) no-repeat;
-			}
-			.public_title{
-				margin-left: 26px;
-				font-size: 26px;
-				line-height: 34px;
-				height: 34px;
-				color: white;
-				background: url(../images/ht_02.jpg) repeat-x;
-			}
+
 	
 
 

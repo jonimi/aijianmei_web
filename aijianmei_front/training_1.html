@@ -50,22 +50,24 @@
 					<li><a id="login">登陆 </a>|</li>
 					<li><a href="account.html">注册 </a>|</li>
 					<li class="more"><a href="#">消息<span class="triangle"></span> </a>|
-						<ul class="message">
-							<li><a href="#">消息</a></li>
-							<li><a href="#">消息</a></li>
-							<li><a href="#">消息</a></li>
-							<li><a href="#">消息</a></li>
-						</ul>
-					
-					</li>
-					<li class="more"><a href="">账号<span class="triangle"></span> </a>
-						<ul class="account">
-							<li><a href="#">账号</a></li>
-							<li><a href="#">账号</a></li>
-							<li><a href="#">账号</a></li>
-							<li><a href="#">账号</a></li>
-						</ul>
-					</li>
+							<ul class="message">
+								<li><a href="letter.html">查看私信</a></li>
+								<li><a href="comment.html">查看评论</a></li>
+								<li><a href="mention.html">查看@我</a></li>
+								<li><a href="fans.html">查看粉丝</a></li>
+								<li><a href="inform.html">查看通知</a></li>
+								<li><a href="order.html">查看预约</a></li>
+							</ul>
+						</li>
+						<li class="more"><a href="">帐号<span class="triangle"></span> </a>
+							<ul class="account">
+								<li><a href="information.html">个人资料</a></li>
+								<li><a href="receive.html">收货地址</a></li>
+								<li><a href="mod_face.html">修改头像</a></li>
+								<li><a href="bind.html">绑定帐号</a></li>
+								<li><a href="">退出帐号</a></li>
+							</ul>
+						</li>
 				</ul>
 				<form class="search">
 					<fieldset>
@@ -87,7 +89,7 @@
 					<li class="now_position"><a href="training.html">锻炼</a></li>
 					<li><a href="nutri.html">营养</a></li>
 					<li><a href="add.html">补充</a></li>
-					<li><a href="activity.html">活动</a></li>
+					<li><a href="activity.html">论坛</a></li>
 					<li><a href="pal.html">交友互动</a></li>
 				</ul>
 				<span class="position">爱健美/首页</span>
@@ -161,182 +163,195 @@
 
 
 		<div id="content" class="clearfix">
-			<div class="left_sub">
-				<h1 class="title_1"><a href="#">全部</a></h1>
-				<ul>
-					<li class="each_video all">
-						训练基础知识
-					</li>
-					<li class="each_video">
-						<a href="training_1.html">心</a>
-					</li>
-					<li class="each_video">
-						<a href="#">暖/降温</a>
-					</li>
-					<li class="each_video">
-						<a href="#">主体类型</a>
-					</li>
-					<li class="each_video">
-						<a href="#">伸展</a>
-					</li>
-					<li class="each_video">
-						<a href="#">重复与组数</a>
-					</li>
-					<li class="each_video all">
-						程序
-					</li>
-					<li class="each_video">
-						<a href="#">减肥</a>
-					</li>
-					<li class="each_video">
-						<a href="#">肌肉增益</a>
-					</li>
-					<li class="each_video">
-						<a href="#">女性</a>
-					</li>
-					<li class="each_video">
-						<a href="#">体重</a>
-					</li>
-					<li class="each_video">
-						<a href="#">初学者</a>
-					</li>
-					<li class="each_video all">
-						练习
-					</li>	
-					<li class="each_video">
-						<a href="#">复合演习</a>
-					</li>
-					<li class="each_video">
-						<a href="#">隔离练习</a>
-					</li>
-					<li class="each_video">
-						<a href="#">肌练习</a>
-					</li>
-					<li class="each_video">
-						<a href="#">体重演习</a>
-					</li>
-					<li class="each_video all">
-						肌肉组
-					</li>
-					<li class="each_video">
-						<a href="#">背部</a>
-					</li>
-					<li class="each_video">
-						<a href="#">胸部</a>
-					</li>
-					<li class="each_video">
-						<a href="#">腿</a>
-					</li>
-					<li class="each_video">
-						<a href="#">腹肌</a>
-					</li>
-					<li class="each_video">
-						<a href="#">武器</a>
-					</li>
-					<li class="each_video">
-						<a href="#">肩</a>
-					</li>
-				</ul>
+			<div class="sider_all">
+				<div class="lay_sider">
+					<div class="subsider">
+						<span class="border_line"></span>
+						<h3 class="video_all">全部</h3>
+						<span class="border_line"></span>
+						<ul>
+							<li class="each_video all">
+								训练基础知识
+							</li>
+							<li class="each_video">
+								<a href="training_1.html">心</a>
+							</li>
+							<li class="each_video">
+								<a href="#">暖/降温</a>
+							</li>
+							<li class="each_video">
+								<a href="#">主体类型</a>
+							</li>
+							<li class="each_video">
+								<a href="#">伸展</a>
+							</li>
+							<li class="each_video">
+								<a href="#">重复与组数</a>
+							</li>
+							<span class="border_line"></span>
+							<li class="each_video all">
+								程序
+							</li>
+							<li class="each_video">
+								<a href="#">减肥</a>
+							</li>
+							<li class="each_video">
+								<a href="#">肌肉增益</a>
+							</li>
+							<li class="each_video">
+								<a href="#">女性</a>
+							</li>
+							<li class="each_video">
+								<a href="#">体重</a>
+							</li>
+							<li class="each_video">
+								<a href="#">初学者</a>
+							</li>
+							<span class="border_line"></span>
+							<li class="each_video all">
+								练习
+							</li>	
+							<li class="each_video">
+								<a href="#">复合演习</a>
+							</li>
+							<li class="each_video">
+								<a href="#">隔离练习</a>
+							</li>
+							<li class="each_video">
+								<a href="#">肌练习</a>
+							</li>
+							<li class="each_video">
+								<a href="#">体重演习</a>
+							</li>
+							<span class="border_line"></span>
+							<li class="each_video all">
+								肌肉组
+							</li>
+							<li class="each_video">
+								<a href="#">背部</a>
+							</li>
+							<li class="each_video">
+								<a href="#">胸部</a>
+							</li>
+							<li class="each_video">
+								<a href="#">腿</a>
+							</li>
+							<li class="each_video">
+								<a href="#">腹肌</a>
+							</li>
+							<li class="each_video">
+								<a href="#">武器</a>
+							</li>
+							<li class="each_video">
+								<a href="#">肩</a>
+							</li>
+							<span class="border_line"></span>
+						</ul>
+					</div>
+				</div>
 			</div>
 
 
-			<div class="training">
+			<div class="right_sider">
 
-				<div class="part_1">
-					<h1 class="title_2">了解锻炼的意义<span class="hr_1 hr"></span></h1>
-					<div class="tr_top clearfix">
-						<a href="article.html" class="store.html"><img src="images/training/duanlian_23.jpg" alt="no" class="supple_pic" /></a>
-						<div class="lay_detail">
-							<a href="article.html" class="detail">锻炼重在技巧</a>
-							<p>最好的选择，最快的锻炼方式和最优秀的视频教学</p>
-							<a href="article.html" class="read_art">点击阅读</a>
+				<div class="part_top clearfix">
+					<div class="lay_top clearfix">
+						<h1 class="public_title">了解锻炼的意义</h1>
+						<div class="" style="margin:0 15px;">
+							<div class="tr_top clearfix">
+							<a class="store.html"><img src="images/training/duanlian_23.jpg" alt="no" class="supple_pic" /></a>
+							<div class="lay_detail">
+								<a href="article.html" class="detail">锻炼重在技巧</a>
+								<p>最好的选择，最快的锻炼方式和最优秀的视频教学</p>
+								<a href="article.html" href="#" class="read_art">点击阅读</a>
+							</div>
+							</div>
+							<ul class="clearfix">
+							<li class="classify">
+								<a href="classify.html" class="lay_cf">
+									
+										<img src="images/training/abs.png" width="220" height="214px" alt="" class="best" />
+										<p>最畅销分类一：XX蛋白粉</p>
+									
+								</a>
+							</li>
+							<li class="classify">
+								<a href="classify.html" class="lay_cf">
+									<div>
+										<img src="images/training/cardio.png" width="220" height="214px" alt="" class="best" />
+										<p>最畅销分类一：XX蛋白粉</p>
+									</div>
+								</a>
+							</li>
+							<li class="classify">
+								<a href="classify.html" class="lay_cf">
+									<div>
+										<img src="images/training/triceps.png" width="220" height="214px" alt="" class="best" />
+										<p>最畅销分类一：XX蛋白粉</p>
+										<p class="price"></p>
+									</div>
+								</a>
+							</li>
+							</ul>
 						</div>
 					</div>
-					<ul class="clearfix">
-						<li class="classify">
-							<a href="classify.html" class="lay_cf">
-								
-									<img src="images/training/back.png" width="220" height="214px" alt="" class="best" />
-									<p>最畅销分类一：XX蛋白粉</p>
-									<p class="price"></p>
-								
-							</a>
-						</li>
-						<li class="classify">
-							<a href="classify.html" class="lay_cf">
-								<div>
-									<img src="images/training/legs.png" width="220" height="214px" alt="" class="best" />
-									<p>最畅销分类一：XX蛋白粉</p>
-									<p class="price"></p>
-								</div>
-							</a>
-						</li>
-						<li class="classify">
-							<a href="classify.html" class="lay_cf">
-								<div>
-									<img src="images/training/shoulders.png" width="220" height="214px" alt="" class="best" />
-									<p>最畅销分类一：XX蛋白粉</p>
-									<p class="price"></p>
-								</div>
-							</a>
-						</li>
-					</ul>
 				</div>
 
-				<div class="part_2">
-					<div class="block_1 clearfix">
-						<h1 class="title_3">add muscle</h1>
-						<ul>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/111.jpg" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/112.png" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/113.jpg" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble defferent">
-								<a href="article.html"><img src="images/training/114.jpg" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-						</ul>
-					</div>
-					<div class="block_2 clearfix">
-						<h1 class="title_3">add muscle</h1>
-						<ul>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/115.jpg" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/116.png" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble">
-								<a href="article.html"><img src="images/training/117.png" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-							<li class="nubble defferent">
-								<a href="article.html"><img src="images/training/118.jpg" alt="no" class="rt_picture" /></a>
-								<p>add muscle</p>
-								<p>add muscle</p>
-							</li>
-						</ul>
+				<div class="part_top clearfix">
+					<div class="lay_top clearfix">
+						<div class="block_1 clearfix">
+							<h1 class="public_title">add muscle</h1>
+							<ul>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/111.jpg" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/112.png" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/113.jpg" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble defferent">
+									<a href="article.html"><img src="images/training/114.jpg" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+							</ul>
+						</div>
+						<div class="block_2 clearfix">
+							<h1 class="public_title">add muscle</h1>
+							<ul>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/115.jpg" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/116.png" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble">
+									<a href="article.html"><img src="images/training/117.png" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+								<li class="nubble defferent">
+									<a href="article.html"><img src="images/training/118.jpg" alt="no" class="rt_picture" /></a>
+									<p>add muscle</p>
+									<p>add muscle</p>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-
-				<div class="part_3">
+				<div class="part_3 clearfix">
 					<div class="sidebar">
 						<div class="sort">
 							<span class="sort1" id="show"><a href="video.html">视频</a></span>
@@ -708,36 +723,37 @@
 							<a href="" class="record">3</a>
 							<button class="next"><a href="">下一页</a></button>
 					</div>
+					</div>
 				</div>
 
-				<div>
-					<h1 class="title_2">增加内容分类<span class="hr_1 hr"></span></h1>
-					<h2 class="title_4">全部</h2>
-					<ul class="re_nav">
-						<li>
-							<a href="training_1.html">增加肌肉</a>
-						</li>
-						<li>
-							<a>减少脂肪</a>
-						</li>
-						<li>
-							<a>卫生与健康</a>
-						</li>
-						<li>
-							<a>免疫功能</a>
-						</li>
-						<li>
-							<a>补充提示与注意</a>
-						</li>
-						<li>
-							<a>保健品行业</a>
-						</li>
-					</ul>
+				<div class="part_top clearfix">
+					<span class="corner_left"></span>
+					<div class="lay_top clearfix">
+						<h1 class="public_title">增加内容分类</h1>
+						<h2 class="title_4">全部</h2>
+						<ul class="re_nav">
+							<li>
+								<a href="training_1.html">增加肌肉</a>
+							</li>
+							<li>
+								<a>减少脂肪</a>
+							</li>
+							<li>
+								<a>卫生与健康</a>
+							</li>
+							<li>
+								<a>免疫功能</a>
+							</li>
+							<li>
+								<a>补充提示与注意</a>
+							</li>
+							<li>
+								<a>保健品行业</a>
+							</li>
+						</ul>
+					</div>
+					<span class="corner_bottom"></span>
 				</div>
-
-			</div>
-
-
 			</div>
 		</div>
 

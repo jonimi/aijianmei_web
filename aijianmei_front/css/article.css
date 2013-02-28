@@ -1,33 +1,12 @@
-.clearfix:after{
-	content:"";
-	clear:both;
-	display:block;
-	height:0;
-	visibility:hidden;
-	line-height:0;
-}
-.clearfix{
-	zoom:1;
-} 
-.logo{
-	margin-right:12px;
-}
-a{
-	cursor:pointer;
-}
 	/*header*/
 	#header{
 		width:980px;
-		background: white;
 	}
 	/*content*/
-	#content{
-	}
 		.content_left{
 			float:left;
 			padding: 25px 0 0 15px;
 			font-size: 13px;
-			background: white;
 		}
 
 		.content_left .title_1{
@@ -356,9 +335,8 @@ a{
 		/*右边广告部分*/
 		.content_right{
 			float:right;
-			width:295px;
+			width:299px;
 			margin-right: 2px;
-			background: white;
 		}
 		.content_right .title_4{
 			margin : 10px 0;

@@ -52,19 +52,21 @@
 						<li><a href="account.html">注册 </a>|</li>
 						<li class="more"><a href="#">消息<span class="triangle"></span> </a>|
 							<ul class="message">
-								<li><a href="#">消息</a></li>
-								<li><a href="#">消息</a></li>
-								<li><a href="#">消息</a></li>
-								<li><a href="#">消息</a></li>
+								<li><a href="letter.html">查看私信</a></li>
+								<li><a href="comment.html">查看评论</a></li>
+								<li><a href="mention.html">查看@我</a></li>
+								<li><a href="fans.html">查看粉丝</a></li>
+								<li><a href="inform.html">查看通知</a></li>
+								<li><a href="order.html">查看预约</a></li>
 							</ul>
-						
 						</li>
-						<li class="more"><a href="">账号<span class="triangle"></span> </a>
+						<li class="more"><a href="">帐号<span class="triangle"></span> </a>
 							<ul class="account">
-								<li><a href="#">账号</a></li>
-								<li><a href="#">账号</a></li>
-								<li><a href="#">账号</a></li>
-								<li><a href="#">账号</a></li>
+								<li><a href="information.html">个人资料</a></li>
+								<li><a href="receive.html">收货地址</a></li>
+								<li><a href="mod_face.html">修改头像</a></li>
+								<li><a href="bind.html">绑定帐号</a></li>
+								<li><a href="">退出帐号</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -158,48 +160,22 @@
 		</div>
 	</div>				
 			<div class="content">
-					<div class="sidebar">
+					<div class="sider_all sidebar">
 						<div class="sort">
+							<span class="border_line"></span>
 							<span class="sort1" id="show"><a href="art_all.html">文章</a></span>
 							<span class="sort2"><a href="video.html">视频</a></span>
-							
+							<span class="border_line"></span>
 						</div>
-						<ul class="bar current" id="sort1">
-							<li class="list">文章</li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
-							<li class="list"><a href="">文章1</a></li>
+						<ul class="bar current">
+							<li class="each_video"><a href="">文章1</a></li>
+							<li class="each_video"><a href="">文章1</a></li>
+							<li class="each_video"><a href="">文章1</a></li>
+							<li class="each_video"><a href="">文章1</a></li>
+							<li class="each_video"><a href="">文章1</a></li>
+						
 						</ul>
-						<ul class="bar" id="sort2">
-							<li class="list">全部</li>
-							<li class="list"><a href="">颈部分</a></li>
-							<li class="list"><a href="">肩膀</a></li>
-							<li class="list"><a href="">陷阱</a></li>
-							<li class="list"><a href="">二头肌</a></li>
-							<li class="list"><a href="">前臂</a></li>
-							<li class="list"><a href="">胸部</a></li>
-							<li class="list"><a href="">腹部</a></li>
-							<li class="list"><a href="">四头肌</a></li>
-							<li class="list"><a href="">肱三头</a></li>
-							<li class="list"><a href="">背阔肌</a></li>
-							<li class="list"><a href="">中菱角</a></li>
-							<li class="list"><a href="">臂大肌</a></li>
-							<li class="list"><a href="">臂中肌</a></li>
-							<li class="list"><a href="">股二头肌</a></li>
-							<li class="list"><a href="">腓肠肌</a></li>
-						</ul>					
+							<span class="border_line"></span>
 					</div>
 				<div class="video">
 						<div class="all">
@@ -349,32 +325,5 @@
 			<script type="text/javascript" src="js/jquery.js"></script>
 		
 			<script type="text/javascript" src="js/public.js"></script>
-			<script type="text/javascript">
-				$(function(){
-					$(".sort span").mouseover(function(){
-						var $id;
-						if($(this).hasClass("sort1")){
-							$id = $("#sort1");
-						}
-						else if($(this).hasClass("sort2")){
-							$id = $("#sort2");
-						}
-						$id.addClass("current").siblings().removeClass("current");
-						$(this).mouseout(function(){
-							if(!$(".show").hasClass($(".current").attr("id"))){
-								if($(".current").attr("id") == "sort1"){
-									var closest = $("#sort2");
-								}
-								else var closest = $("#sort1");
-								$(".current").removeClass("current");
-								closest.addClass("current");
-							}
-						});
-					});	
-					$(".select>a").click(function(){
-						$(this).addClass("pre").siblings().removeClass("pre");
-					})
-				});
-			</script>
 		</body>
 	</html>

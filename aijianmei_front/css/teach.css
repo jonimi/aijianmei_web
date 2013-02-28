@@ -1,22 +1,4 @@
-.clearfix {
 
-	}
-	.clearfix:before {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	clear: both
-	}
-	a{cursor:pointer;}
-	.triangle{
-		border-color:#BCBCBC #fff #fff #fff;
-	}
-.wrapper{
-	background: white;
-}
 /***********************content开始*************************/
 #content{
 	margin: 20px 60px;
@@ -44,8 +26,8 @@
 		border-bottom: 1px solid #CCC;
 	}
 #content .right_training{
-	float:left;
-	width:703px;
+	float:right;
+	width:680px;
 	font-weight: 600;
 }
 	.right_training .hr{

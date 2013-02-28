@@ -1,89 +1,55 @@
-﻿.clearfix {
-
-	}
-	.clearfix:before {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	display: table; content: ""
-	}
-	.clearfix:after {
-	clear: both
-	}
-	a{cursor:pointer;}
-	.triangle{
-		border-color:#BCBCBC #fff #fff #fff;
-	}
-.wrapper{
-	background: white;
-}
+﻿
 /***********************content开始*************************/
 
-
-/*add一级页面部分开始*/
 #content{
-	margin: 20px 60px;
+	margin-top: 10px;
 }
-#content .left_sub{
-	float:left;
-	width:157px;
-}
-	.left_sub .title_1{
-		margin-right: 30px;
-		padding-bottom: 6px;
-		font-size: 16px;
-		border-bottom: 1px solid #CCC;
-	}
-	.left_sub .all{
+/*add一级页面部分开始*/
+	.all{
 		font-size: 14px;
 		color:#525252;
 		font-weight: 600;
 	}
-	.left_sub .each_video{
+	.each_video{
 		margin-right: 30px;
 		padding-left: 11px;
 		line-height: 32px;
 		font-size: 13px;
-		border-bottom: 1px solid #CCC;
+		/*border-bottom: 1px solid #CCC;*/
 	}
 #content .right_training{
 	float:left;
 	width:703px;
 }
 
-	.right_training .tr_top{
+	.tr_top{
+		margin: 7px 20px;
 		border: 1px solid #CCC;
 		border-radius: 8px;
 	}
-	.right_training .expend{
+	.expend{
 		float: right;
 		width: 50px;
 		height: 20px;
 		line-height: 20px;
-		margin-top: 15px;
+		margin: 15px;
 		text-align: center;
 		color: black;
 		border: 1px solid #CCC;
 		background: lightGrey;
 	}
-	.tr_top .supple_pic{
+	.supple_pic{
 		float: left;
 		margin-left: 10px;
 		margin-right: 20px;
 	}
-	.tr_top .detail{
+	.detail{
 		display: inline-block;
 		margin: 22px 0 10px 0;
 		font-size: 20px;
 		color: #003096;
 	}
-	.tr_top p{
-
-	}
-	.tr_top .detail{
-
-	}
-	.tr_top .purchase{
+	.purchase{
 		display:inline-block;
 		width: 81px;
 		height:31px;
@@ -97,7 +63,7 @@
 	.classify{
 		float: left;
 		width: 222px;
-		margin: 18px 6px;
+		margin: 18px 18px;
 	}
 	.classify .best{
 		border: 1px solid #ccc;
@@ -122,7 +88,7 @@
 		float: left;
 		width: 314px;
 		height: 64px;
-		margin: 3px 32px 3px 0;
+		margin: 5px 35px;
 		padding: 7px 0px;
 		border: 2px solid #CCC;
 	}
@@ -153,6 +119,7 @@
 /*子页面新增视频内容*/
 		.content{
 			width: 700px;
+			margin:5px auto;
 		}
 		.content .ct{
 			padding: 14px 8px 20px 8px;
@@ -213,7 +180,7 @@
 		}
 		.nubble{
 			float: left;
-			margin: 5px 27px 0 0;
+			margin: 5px 20px;
 		}
 		.defferent{
 			margin-right:0px;

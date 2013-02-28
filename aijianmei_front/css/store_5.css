@@ -1,4 +1,4 @@
-.clearfix:after{
+/*.clearfix:after{
 	content:"";
 	clear:both;
 	display:block;
@@ -32,7 +32,6 @@ body{
 	/*header*/
 	#header{
 		width:980px;
-		background: white;
 	}
 	/*content*/
 	#content{
@@ -40,7 +39,6 @@ body{
 		.content_all{
 			padding: 25px 0 0 15px;
 			font-size: 13px;
-			background: white;
 		}
 
 		.content_all .title_1{
@@ -127,6 +125,7 @@ body{
 				}
 				.show_food{
 					display: block;
+					height:284px;
 					margin-bottom: 8px;
 					padding: 3px;
 					border: 1px solid #CCC;
@@ -235,7 +234,7 @@ body{
 
 				}
 				.buy{
-					display: block;
+					display: inline-block;
 					width: 82px;
 					height: 31px;
 					line-height: 31px;
@@ -244,7 +243,17 @@ body{
 					color: white;
 					background: url(../images/12.png) no-repeat;
 				}
-				.buy:hover{
+				.bicycle{
+					display: inline-block;
+					width: 82px;
+					height: 31px;
+					line-height: 31px;
+					margin: 20px 20px;
+					text-align: center;
+					color: white;
+					background: url(../images/sd5_16.png) no-repeat;
+				}
+				.buy:hover,.bicycle:hover{
 					color:white;
 				}
 		/*store_middle*/
@@ -355,26 +364,25 @@ body{
 								position: absolute;
 								top: 0px;
 								left:0px;
-								display: block;
+								display: none;
 								width: 198px;
 								height: 100%;
 								background: black;
-								opacity: 0;
-								filter: alpha(opacity=0);
-								transition:opacity 2s;
-								-o-transition:opacity 2s;
-								-moz-transition:opacity 2s;
-								-webkit-transition:opacity 2s;
+								opacity: 0.3;
+								filter:alpha(opacity=30);
+								background: #ccc\9\0;
+								*background:transparent;					
 							}
 /*五六级商店页面底部共同部分 */
 				.store_bottom{
-					
+					margin: 20px 0px 0 16px;
 				}
 				.bottom_part_left{
 					float:left;
 					width:611px;
 				}
 				.web_expend_2{
+					position:relative;
 					margin:20px 0;
 					height: 27px;
 					line-height: 27px;
@@ -410,8 +418,8 @@ body{
 					background: none;
 				}
 				.web_expend_2 .read_time{
-					position:relative;
-					float:right;
+					position:absolute;
+					right:0px;
 					height:27px;
 					line-height: 27px;
 				}
@@ -493,13 +501,11 @@ body{
 				.cm_content .cm_top{
 					height: 25px;
 				} 
-					.cm_top .page{
-						display: inline;
+					.cm_top .page_1{
+						display: inline-block;
 						float: right;
-						zoom:1;
 					}
-
-						.page .choice_page{
+						.page_1 .choice_page{
 							display: inline-block;
 							padding: 4px;
 							color: white;
@@ -507,17 +513,16 @@ body{
 							
 						}
 						.lay_page{
-							display:inline;
-							zoom:1;
+							display:inline-block;
 						}
-						.page a{
+						.page_1 a{
 							display: inline-block;
 							width: 15px;
 							height: 15px;
 							margin: 0 5px;
 							text-align: center;
 						}
-						.page .pre_page{
+						.page_1 .pre_page{
 							width: 41px;
 							padding: 4px;
 							margin: 0;
@@ -525,7 +530,7 @@ body{
 							border: 1px solid #CCC;
 							cursor:default;
 						}
-						.page .next_page{
+						.page_1 .next_page{
 							width: 41px;
 							padding: 4px;
 							margin: 0;
@@ -547,11 +552,14 @@ body{
 						.target .target_pic{
 
 							float:left;
-							height:120px;
 							margin-right: 10px;
 						}
 						.target .care{
 							display:block;
+						}
+						.cm_left{
+							float: left;
+							width: 574px;
 						}
 						.target .name{
 							display: block;
@@ -562,6 +570,7 @@ body{
 						}
 						.target .to{
 							float:right;
+							display:inline;
 						}
 				.relation{
 					margin-bottom: 100px;
@@ -586,7 +595,6 @@ body{
 			min-height: 100%;
 			width:300px;
 			margin-right: 10px;
-			background: white;
 		}
 		.bottom_part_right .title_4{
 			margin : 10px 0;
@@ -603,32 +611,79 @@ body{
 			}
 /*五六级商店页面底部共同部分结束 */
 	/*放大镜*/
-	.small{
+	/*.small{
 		width:160px;  
 	    height:160px;  
 	    position:absolute;  
 	    top:0px;  
 	    left:0px;  
 	    background:#CFF;  
-	    opacity:0.75;  
+	    opacity:0.75; 
+	    filter:alpha(opacity=75); 
 	    display:none;
 		}
 	.enlarge{
 		width: 400px;
 		height: 293px;
 		overflow: hidden;
-		position: absolute;
+		position: relative;
 		z-index: 100;
-		left: 670px;
-		top:282px;
+		left: 454px;
+		top:-290px;
 		display: none;
 		background: white;
 		border: 1px solid #CCC;
-		left:770px\9\0;
 	}
 	.enlarge img{
 		position: absolute;
-	}
+	}*/
+.jqzoom{
+border:1px solid #ccc;
+float:left;
+position:relative;
+margin-bottom: 10px;
+padding:3px;
+cursor:pointer;
+}
+
+.jqzoom img{
+float:left;
+width:434px;
+height:284px;
+}
+
+
+div.zoomdiv {
+z-index                 : 100;
+position                : absolute;
+top:0px;
+left:0px;
+width                   : 200px;
+height                  : 200px;
+background: #ffffff;
+border:1px solid #CCCCCC;
+display:none;
+text-align: center;
+overflow: hidden;
+
+
+}
+
+div.jqZoomPup {
+z-index                 : 10;
+visibility              : hidden;
+position                : absolute;
+top:0px;
+left:0px;
+width                   : 50px;
+height                  : 50px;
+border: 1px solid #aaa;
+background: #ffffff url(../images/zoom.gif) 50% top  no-repeat;;
+opacity: 0.5;
+-moz-opacity: 0.5;
+-khtml-opacity: 0.5;
+filter: alpha(Opacity=50);
+}
 	
 	/*footer*/
 

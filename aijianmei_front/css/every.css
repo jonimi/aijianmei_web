@@ -1,33 +1,7 @@
-a:hover{
-	cursor:pointer;
-}
+
 /*#content开始---------------------------*/
 	#content{
 		margin-top: 12px;
-	}
-	/*左边导航栏left_sub*/
-	.left_sub{
-		float:left;
-		width:135px;
-		margin:0 10px 0 25px;
-	}
-	.title_1{
-		margin-right: 30px;
-		padding-bottom: 6px;
-		font-size: 16px;
-		border-bottom: 1px solid #CCC;
-	}
-	.all{
-		font-size: 14px;
-		color:#525252;
-		font-weight: 600;
-	}
-	.each_video{
-		margin-right: 30px;
-		padding-left: 11px;
-		line-height: 32px;
-		font-size: 13px;
-		border-bottom: 1px solid #CCC;
 	}
 	/*右边内容content------------------*/
 	.content{
