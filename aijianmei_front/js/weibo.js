@@ -4,7 +4,7 @@
 		var _index = $(this).index();
 		var Py = -44 * _index;
 		$(this).parent().css("background-position-y",Py);
-		if(_index == 2){
+		if(_index == 2 | _index == 1){
 			$("#enter").css("margin-top","53px");
 			$(".dialog").show();							
 		}

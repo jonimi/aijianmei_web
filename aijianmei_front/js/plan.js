@@ -24,6 +24,7 @@
 			});							
 		});
 	});
+	
 	$("div.opt").click(function(){
 	
 		var $parent = $(this).parent()[0];
@@ -38,7 +39,7 @@
 				
 				$(".current .select").css("display","inline-block");
 				//console.log($(".current .select"))
-				$(".current .options").addClass("select");
+				
 			}
 	})
 	
