@@ -638,6 +638,7 @@ float: left;
 .repost,.like{
 	float:right;
 	width:80px;
+	height:19px;
 	color:#555;
 	cursor:pointer;
 }
