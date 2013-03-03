@@ -548,7 +548,8 @@ class UserAction extends Action {
     public function camera()
     {
     	$folder = '/data/home/website2/htdocs/uploads/';
-    	$filename = md5($_SERVER['REMOTE_ADDR'].rand()).'.jpg';
+    	//$filename = md5($_SERVER['REMOTE_ADDR'].rand()).'.jpg';
+    	$filename = 'orig'.$this->mid.'.jpg';
     	
     	$original = $folder.$filename;
     	
@@ -576,16 +577,21 @@ class UserAction extends Action {
     		exit;
     	}
     	
+    	$thumb = api("Thumbnail");
+    	$thumb->setSrcImg($original);
+    	$thumb->setDstImg($folder.'orig_m'.$this->mid.'.jpg');
+    	$thumb->createImg(180, 180);
+    	
     	// Moving the temporary file to the originals folder:
-    	rename($original,'/uploads/'.$filename);
-    	$original = '/uploads/'.$filename;
+    	rename($original,$folder.$filename);
+    	$original = $folder.$filename;
     	
 
     	$origImage	= imagecreatefromjpeg($original);
     	$newImage	= imagecreatetruecolor(154,110);
     	imagecopyresampled($newImage,$origImage,0,0,0,0,154,110,520,370);
     	
-    	imagejpeg($newImage,'/uploads/'.$filename);
+    	imagejpeg($newImage,$folder.$filename);
     	
     	echo '{"status":1,"message":"Success!","filename":"'.$filename.'"}';
     }
