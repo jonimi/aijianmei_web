@@ -110,9 +110,13 @@
 <script type="text/javascript" src="/public/js/common.js"></script>
 <script src="../Public/js/slides.min.jquery.js"></script>
 <script src="/public/js/weibo.js" type="text/javascript"></script>
-<script src="../Public/js/webcam.js" type="text/javascript"></script>
+<script src="../Public/js/jquery.uploadify.min.js" type="text/javascript"></script>
+<script src="../Public/assets/webcam/webcam.js"></script>
+<!-- <script src="../Public/assets/js/script.js"></script> -->
+<link rel="stylesheet" href="../Public/css/uploadify.css" />
+<link rel="stylesheet" type="text/css" href="../Public/assets/css/styles.css" />
 <script type="text/javascript">
-webcam.set_api_url('action.php');
+/* webcam.set_api_url('action.php');
 webcam.set_quality(90);
 webcam.set_shutter_sound(true);
 var result = webcam.get_html(320,240,160,120);
@@ -131,7 +135,7 @@ function completeHandler(msg) {
         webcam.reset(); 
     } 
     else alert("PHP Error: " + msg);
-}
+} */
 </script>
 				<div class="sub_nav">
 					<ul class="wb_nav clearfix">
@@ -195,8 +199,36 @@ function completeHandler(msg) {
 								<div class="mod_content">
 									<div class="upload_way">
 										<button class="local">本地照片</button>
-										<div id="cam"><button class="take" onclick="take_snapshot()">拍照上传</button></div>
+										<input type="file" name="uploadify" id="uploadify" multiple="true" />
+										<script type="text/javascript">
+										$("#uploadify").uploadify({
+											'swf'      :  '../Public/js/uploadify.swf',
+											'uploader' :  '<?php echo U("home/User/uploadify");?>'
+										});
+										</script>
+										<div id="cam"><button class="take" onclick="camera.style.display=''">拍照上传</button></div>
 										<p class="b_tip">仅支持JPG、GIF、PNG，且文件小于5M</p>
+										<div id="camera" style="display:none;">
+											
+											<span class="camTop"></span>
+										    
+										    <div id="screen">
+										    <script type="text/javascript">
+											webcam.set_swf_url('assets/webcam/webcam.swf');
+											document.write(webcam.get_html(520,370,520,370));
+											</script>
+										    </div>
+										    <div id="buttons">
+										    	<div class="buttonPane">
+										        	<a id="shootButton" href="" class="blueButton">Shoot!</a>
+										        </div>
+										        <div class="buttonPane hidden">
+										        	<a id="cancelButton" href="" class="blueButton">Cancel</a> <a id="uploadButton" href="" class="greenButton">Upload!</a>
+										        </div>
+										    </div>
+										    
+										    <span class="settings"></span>
+										</div>
 									</div>
 									<div id="result"></div>
 									<div class="upload">
@@ -289,7 +321,7 @@ function completeHandler(msg) {
 				</div>
 			<script type="text/javascript" src="../Public/js/public.js"></script>
 			<script type="text/javascript" src="../Public/js/jquery-ui.js"></script>
-			<script type="text/javascript" src="../Public/js/index.js"></script>
+			<!-- <script type="text/javascript" src="../Public/js/index.js"></script> -->
 			<script type="text/javascript">
 				$(function(){
 					$(".close_ad").click(function(){

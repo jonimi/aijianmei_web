@@ -519,6 +519,76 @@ class UserAction extends Action {
         $this->setTitle ( $data ['type'] == 'receive' ? L('receive_comment') : L('send_comment') );
         $this->display ();
     }
+    
+    public function uploadify()
+    {
+    	$targetFolder = '/uploads'; // Relative to the root
+    	
+    	$verifyToken = md5('unique_salt' . $_POST['timestamp']);
+    	
+    	if (!empty($_FILES)) {
+    		$tempFile = $_FILES['Filedata']['tmp_name'];
+    		$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
+    		$targetFile = rtrim($targetPath,'/') . '/' . $_FILES['Filedata']['name'];
+    	
+    		// Validate the file type
+    		$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
+    		$fileParts = pathinfo($_FILES['Filedata']['name']);
+    	
+    		if (in_array($fileParts['extension'],$fileTypes)) {
+    			move_uploaded_file($tempFile,$targetFile);
+    			echo '1';
+    			echo $targetFile;
+    		} else {
+    			echo 'Invalid file type.';
+    		}
+    	}
+    }
+    
+    public function camera()
+    {
+    	$folder = '/data/home/website2/htdocs/uploads/';
+    	$filename = md5($_SERVER['REMOTE_ADDR'].rand()).'.jpg';
+    	
+    	$original = $folder.$filename;
+    	
+    	// The JPEG snapshot is sent as raw input:
+    	$input = file_get_contents('php://input');
+    	
+    	if(md5($input) == '7d4df9cc423720b7f1f3d672b89362be'){
+    		// Blank image. We don't need this one.
+    		exit;
+    	}
+    	
+    	$result = file_put_contents($original, $input);
+    	if (!$result) {
+    		echo '{
+    	"file"      " '.$original.'
+		"error"		: 1,
+		"message"	: "Failed save the image. Make sure you chmod the uploads folder and its subfolders to 777."
+	}';
+    		exit;
+    	}
+    	
+    	$info = getimagesize($original);
+    	if($info['mime'] != 'image/jpeg'){
+    		unlink($original);
+    		exit;
+    	}
+    	
+    	// Moving the temporary file to the originals folder:
+    	rename($original,'/uploads/'.$filename);
+    	$original = '/uploads/'.$filename;
+    	
+
+    	$origImage	= imagecreatefromjpeg($original);
+    	$newImage	= imagecreatetruecolor(154,110);
+    	imagecopyresampled($newImage,$origImage,0,0,0,0,154,110,520,370);
+    	
+    	imagejpeg($newImage,'/uploads/'.$filename);
+    	
+    	echo '{"status":1,"message":"Success!","filename":"'.$filename.'"}';
+    }
 
     private function __getSearchKey() {
         $key = '';

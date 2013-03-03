@@ -59,7 +59,7 @@
 						<div class="each clearfix">
 						<php>foreach($articles as $a) {</php>
 							<div class="arts">
-								<img src="../Public/images/art1.png" class="pic"/>
+								<img src="{$SITE_URL}/public/images/article/{$a['img']}" class="pic"/>
 									<dl class="info">
 										<dt class="art_title"><a href="/index.php?app=index&mod=Index&act=articleDetail&id={$a['id']}">{$a['title']}</a></dt>
 										<dd class="art_content">{$a['content']|htmlspecialchars_decode|getShort=###, 100|formatComment} 
