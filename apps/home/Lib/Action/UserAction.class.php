@@ -579,8 +579,16 @@ class UserAction extends Action {
     	
     	$thumb = api("Thumbnail");
     	$thumb->setSrcImg($original);
-    	$thumb->setDstImg($folder.'orig_m'.$this->mid.'.jpg');
+    	$thumb->setDstImg($folder.'orig_b'.$this->mid.'.jpg');
     	$thumb->createImg(180, 180);
+    	
+    	$thumb->setSrcImg($original);
+    	$thumb->setDstImg($folder.'orig_m'.$this->mid.'.jpg');
+    	$thumb->createImg(50,50);
+    	
+    	$thumb->setSrcImg($original);
+    	$thumb->setDstImg($folder.'orig_s'.$this->mid.'.jpg');
+    	$thumb->createImg(30,30);
     	
     	// Moving the temporary file to the originals folder:
     	rename($original,$folder.$filename);
