@@ -17,6 +17,48 @@ class IndexAction extends Action {
 	{
 		$this->display();
 	}
+	
+	public function about_us()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function direct()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function founders()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function join()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function privacy()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function ad()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
+	
+	public function contact()
+	{
+		$this->assign('cssFile', 'about_us');
+		$this->display();
+	}
 
 	public function articleDetail()
 	{	
