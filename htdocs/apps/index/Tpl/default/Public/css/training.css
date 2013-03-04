@@ -8,32 +8,6 @@
 	#content{
 		padding-top: 15px;
 	}
-	/*左边导航栏*/	
-	.left_sub{
-		float:left;
-		width:157px;
-	}
-	.title_1{
-		margin-right: 30px;
-		padding-bottom: 6px;
-		font-size: 16px;
-		border-bottom: 1px solid #CCC;
-	}
-	.all{
-		font-size: 16px;
-		color:black;
-		font-weight: 600;
-	}
-	.each_video{
-		margin-left: 11px;
-		line-height: 32px;
-		font-size: 13px;
-		border-bottom: 1px solid #CCC;
-	}
-	.right_training{
-		float:left;
-		width:703px;
-	}
 	/*左边导航栏结束*/		
 	.training{
 		float:left;

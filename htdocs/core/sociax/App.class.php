@@ -35,7 +35,6 @@ class App
      */
     static public function init()
     {
-        echo "load_init()\n";    
         // 设定错误和异常处理
         set_error_handler(array('App','appError'));
         set_exception_handler(array('App','appException'));
@@ -177,7 +176,6 @@ class App
      */
     static private function build()
     {
-        
         // 加载惯例配置文件 sociax:2010-1-13 修改
         C(include CORE_PATH.'/sociax/convention.php');
 

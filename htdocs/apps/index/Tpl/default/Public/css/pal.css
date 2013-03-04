@@ -29,9 +29,7 @@
 					color:white;
 				}
 	/*content*/
-	.content{
-		background:#fff;
-	}
+
 	
 		.left{
 			float: left;
@@ -457,7 +455,6 @@
 							.function{
 								float: right;
 								margin-left: 10px;
-								border-left: 1px solid;
 								padding-left: 5px;
 								position:relative;
 							}

@@ -56,9 +56,12 @@ class ArticleModel extends Model {
 	}
 	
 	public function getVideoInfoByLink($link)
-	{
+	{	
+		
 		$parse = api('UrlParser');
+		
 		$info = $parse->getVideoInfo($link);
+		
 		return $info;
 	}
 }

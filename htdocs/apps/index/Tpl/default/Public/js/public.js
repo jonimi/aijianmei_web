@@ -88,7 +88,7 @@ $(function(){
 	var move = function(index){
 		var nowleft = -index*sWidth;
 		$("#banner .ul_1").stop(true,false).animate({"left":nowleft},300);
-		$("#banner .ul_2 li").css("border","3px solid transparent").eq(index).css("border","3px solid yellow");
+		$("#banner .ul_2 li").css("border","3px solid transparent").eq(index).css("border","3px solid #4298CE");
 	}
 
 	//透明效果

@@ -42,7 +42,7 @@
 							<ul>
 							<php>foreach($articles as $a) {</php>
 								<li class="nubble">
-									<a href="article.html"><img src="../Public/images/add/111.jpg" alt="no" class="rt_picture" /></a>
+									<a href="{:U('index/Index/articleDetail', array('id'=>$a['id']))}"><img width="200" src="{$SITE_URL}/public/images/article/{$a['img']}" alt="no" class="rt_picture" /></a>
 									<p>{$a['title']}</p>
 									
 								</li>
@@ -76,7 +76,7 @@
 							<ul>
 							<php>foreach($articles as $a) {</php>
 								<li class="nubble">
-									<a href="article.html"><img src="../Public/images/add/111.jpg" alt="no" class="rt_picture" /></a>
+									<a href="{:U('index/Index/articleDetail', array('id'=>$a['id']))}"><img width="200" src="{$SITE_URL}/public/images/article/{$a['img']}" alt="no" class="rt_picture" /></a>
 									<p>{$a['title']}</p>
 									
 								</li>
@@ -120,7 +120,7 @@
 				<php>foreach($articles as $a) {</php>
 					<div class="ar_block">
 						<h2><a href="/index.php?app=index&mod=Index&act=articleDetail&id={$a['id']}">{$a['title']}</a></h2>
-						<span>作者：{$a['author']}</span><span>日期：{$a['create_time']}</span><span>点击：{$a['click']}</span>
+						<span>作者：{$a['author']}</span><span>日期：<php>echo date('Y-m-d H:i:s', $a['create_time'])</php></span><span>点击：{$a['click']}</span>
 						<p>{$a['content']|htmlspecialchars_decode|getShort=###, 20|formatComment}</p>
 					</div>
 				<php>}</php>

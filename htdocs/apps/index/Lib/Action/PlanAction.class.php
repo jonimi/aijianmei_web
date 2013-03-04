@@ -13,6 +13,7 @@ class PlanAction extends Action {
 	
 	public function plan_loss()
 	{
+		$this->assign('cssFile', 'plan');
 		if($_GET['sex']=='m') {
 			$this->display('plan_loss_m');
 		}elseif ($_GET['sex']=='f') {
@@ -24,6 +25,7 @@ class PlanAction extends Action {
 	
 	public function plan_build()
 	{
+		$this->assign('cssFile', 'plan');
 		if($_GET['sex']=='m') {
 			$this->display('plan_build_m');
 		}elseif ($_GET['sex']=='f') {

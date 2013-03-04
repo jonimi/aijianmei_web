@@ -244,7 +244,6 @@ class Db extends Think
         else
             // 默认单数据库
             if ( !$this->connected ) $this->_linkID = $this->connect();
-        
     }
 
     /**

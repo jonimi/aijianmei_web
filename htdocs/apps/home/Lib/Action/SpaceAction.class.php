@@ -88,7 +88,7 @@ class SpaceAction extends Action
 	        }
         }
 
-        
+        //print_r($data);
         $this->assign($data);
         $this->setTitle($data['user']['uname'] . '的空间');
     	$this->display();

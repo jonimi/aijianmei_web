@@ -37,7 +37,7 @@ if(!defined('RUNTIME_ALLINONE'))	define('RUNTIME_ALLINONE', true);
 // 创建运行时目录
 // 修改: 2011.06.01 为防止恶意的目录生成, 仅位于apps目录下的应用才生成缓存目录
 if (!is_dir(RUNTIME_PATH)) {
-	require_once SITE_PATH . '/addons/libs/Io/Dir.class.php';  
+	require_once SITE_PATH . '/addons/libs/Io/Dir.class.php';
 	$dirs    = new Dir(SITE_PATH.'/apps/');
 	$dirs    = $dirs->toArray();
 	$in_dirs = false;
@@ -73,5 +73,4 @@ if(RUNTIME_ALLINONE && is_file(RUNTIME_PATH.'/~allinone.php')) {
 // 记录加载文件时间
 $GLOBALS['_loadTime'] = microtime(TRUE);
 $GLOBALS['_lang'] = array();
-
 ?>

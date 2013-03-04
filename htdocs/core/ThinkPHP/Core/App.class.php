@@ -24,7 +24,6 @@
 class App
 {//类定义开始
 
-
     /**
      +----------------------------------------------------------
      * 应用程序初始化
@@ -408,10 +407,8 @@ class App
      +----------------------------------------------------------
      */
     static public function run() {
-        echo "hello1";
         App::init();
         // 记录应用初始化时间
-
         if(C('SHOW_RUN_TIME'))  $GLOBALS['_initTime'] = microtime(TRUE);
         App::exec();
         // 保存日志记录

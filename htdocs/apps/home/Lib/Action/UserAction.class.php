@@ -257,6 +257,68 @@ class UserAction extends Action {
     	$this->display();
     }
     
+    public function albumList()
+    {
+    	$data['user'] = D('User')->getUserByIdentifier($this->uid);
+    	//判断用户是否存在
+    	if(!$data['user']['uid']){
+    		$this->assign('jumpUrl', $_SERVER['HTTP_REFERER']);
+    		$this->error('用户不存在或已被删除！');
+    	}
+    	 
+    	$data['type'] = $_GET['type'] ? h($_GET['type']) : 'weibo';
+    	if ('weibo' === $data['type']) {
+    		$weiboType = $data['weibo_type'] = h($_GET['weibo_type']);
+    		$data['list'] = D('Operate','weibo')->getSpaceList($this->uid, $weiboType);
+    		//微博menu组装
+    		$data['weibo_menu'] = array(
+    				''  => L('all'),
+    				'original' => L('original'),
+    		);
+    		Addons::hook('home_index_weibo_tab', array(&$data['weibo_menu']));
+    		if(!empty($weiboType)) {
+    			$this->assign('typeClass',"on");
+    			$this->assign('view','block');
+    		}else{
+    			$this->assign('typeClass','off');
+    			$this->assign('view','none');
+    		}
+    	}
+    	$this->assign('data',$data);
+    	$this->display('album_list');
+    }
+    
+    public function photo()
+    {
+    	$data['user'] = D('User')->getUserByIdentifier($this->uid);
+    	//判断用户是否存在
+    	if(!$data['user']['uid']){
+    		$this->assign('jumpUrl', $_SERVER['HTTP_REFERER']);
+    		$this->error('用户不存在或已被删除！');
+    	}
+    	
+    	$data['type'] = $_GET['type'] ? h($_GET['type']) : 'weibo';
+    	if ('weibo' === $data['type']) {
+    		$weiboType = $data['weibo_type'] = h($_GET['weibo_type']);
+    		$data['list'] = D('Operate','weibo')->getSpaceList($this->uid, $weiboType);
+    		//微博menu组装
+    		$data['weibo_menu'] = array(
+    				''  => L('all'),
+    				'original' => L('original'),
+    		);
+    		Addons::hook('home_index_weibo_tab', array(&$data['weibo_menu']));
+    		if(!empty($weiboType)) {
+    			$this->assign('typeClass',"on");
+    			$this->assign('view','block');
+    		}else{
+    			$this->assign('typeClass','off');
+    			$this->assign('view','none');
+    		}
+    	}
+    	$this->assign('data',$data);
+    	$this->display();
+    }
+    
     public function modFace()
     {
     	$data['user'] = D('User')->getUserByIdentifier($this->uid);
@@ -456,6 +518,82 @@ class UserAction extends Action {
         $this->assign ( $data );
         $this->setTitle ( $data ['type'] == 'receive' ? L('receive_comment') : L('send_comment') );
         $this->display ();
+    }
+    
+    public function uploadify()
+    {
+    	$targetFolder = '/uploads'; // Relative to the root
+    	
+    	$verifyToken = md5('unique_salt' . $_POST['timestamp']);
+    	
+    	if (!empty($_FILES)) {
+    		$tempFile = $_FILES['Filedata']['tmp_name'];
+    		$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
+    		$targetFile = rtrim($targetPath,'/') . '/' . $_FILES['Filedata']['name'];
+    	
+    		// Validate the file type
+    		$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
+    		$fileParts = pathinfo($_FILES['Filedata']['name']);
+    	
+    		if (in_array($fileParts['extension'],$fileTypes)) {
+    			move_uploaded_file($tempFile,$targetFile);
+    			echo '1';
+    			echo $targetFile;
+    		} else {
+    			echo 'Invalid file type.';
+    		}
+    	}
+    }
+    
+    public function camera()
+    {
+    	$folder = '/data/home/website2/htdocs/uploads/';
+    	//$filename = md5($_SERVER['REMOTE_ADDR'].rand()).'.jpg';
+    	$filename = 'orig'.$this->mid.'.jpg';
+    	
+    	$original = $folder.$filename;
+    	
+    	// The JPEG snapshot is sent as raw input:
+    	$input = file_get_contents('php://input');
+    	
+    	if(md5($input) == '7d4df9cc423720b7f1f3d672b89362be'){
+    		// Blank image. We don't need this one.
+    		exit;
+    	}
+    	
+    	$result = file_put_contents($original, $input);
+    	if (!$result) {
+    		echo '{
+    	"file"      " '.$original.'
+		"error"		: 1,
+		"message"	: "Failed save the image. Make sure you chmod the uploads folder and its subfolders to 777."
+	}';
+    		exit;
+    	}
+    	
+    	$info = getimagesize($original);
+    	if($info['mime'] != 'image/jpeg'){
+    		unlink($original);
+    		exit;
+    	}
+    	
+    	$thumb = api("Thumbnail");
+    	$thumb->setSrcImg($original);
+    	$thumb->setDstImg($folder.'orig_m'.$this->mid.'.jpg');
+    	$thumb->createImg(180, 180);
+    	
+    	// Moving the temporary file to the originals folder:
+    	rename($original,$folder.$filename);
+    	$original = $folder.$filename;
+    	
+
+    	$origImage	= imagecreatefromjpeg($original);
+    	$newImage	= imagecreatetruecolor(154,110);
+    	imagecopyresampled($newImage,$origImage,0,0,0,0,154,110,520,370);
+    	
+    	imagejpeg($newImage,$folder.$filename);
+    	
+    	echo '{"status":1,"message":"Success!","filename":"'.$filename.'"}';
     }
 
     private function __getSearchKey() {

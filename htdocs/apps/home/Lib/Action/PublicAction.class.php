@@ -470,6 +470,65 @@ class PublicAction extends Action{
 		$this->setTitle(L('reg'));
 		$this->display();
 	}
+	
+	public function registerCoach()
+	{
+		if (service('Passport')->isLogged())
+			redirect(U('home/User/index'));
+		
+		//验证码
+		$opt_verify = $this->_isVerifyOn('register');
+		if ( $opt_verify ) {
+			$this->assign('register_verify_on', 1);
+		}
+		
+		Addons::hook('public_before_register');
+		
+		// 邀请码
+		$invite_code = h($_REQUEST['invite']);
+		$invite_info = null;
+		
+		// 是否开放注册
+		$register_option = model('Xdata')->get('register:register_type');
+		if ($register_option == 'closed') { // 关闭注册
+			$this->error(L('reg_close'));
+		
+		} else if ($register_option == 'invite') { // 邀请注册
+			// 邀请方式
+			$invite_option = model('Invite')->getSet();
+			if ($invite_option['invite_set'] == 'close') { // 关闭邀请
+				$this->error(L('reg_invite_close'));
+			} else { // 普通邀请 OR 使用邀请码
+				if (!$invite_code)
+					$this->error(L('reg_invite_warming'));
+				else if (!($invite_info = $this->__getInviteInfo($invite_code)))
+					$this->error(L('reg_invite_code_error'));
+			}
+		} else { // 公开注册
+			if (!($invite_info = $this->__getInviteInfo($invite_code)))
+				unset($invite_code, $invite_info);
+		}
+		
+		$this->assign('invite_code', $invite_code);
+		$this->assign('invite_info', $invite_info);
+		$this->setTitle('注册教练');
+		$this->display();
+	}
+	
+	public function registerGym()
+	{
+		$this->display();
+	}
+	
+	public function doRegisterCoach()
+	{
+		
+	}
+	
+	public function doRegisterGym()
+	{
+		
+	}
 
 	public function doRegister()
 	{
