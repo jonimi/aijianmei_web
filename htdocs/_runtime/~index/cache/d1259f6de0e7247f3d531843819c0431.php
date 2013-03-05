@@ -5,7 +5,9 @@
 			<title>爱健美</title>
 			<link rel="stylesheet" href="../Public/css/public.css" />
 			<link rel="stylesheet" href="../Public/css/<?php echo ($cssFile); ?>.css" />
-			<link rel="stylesheet" href="../Public/css/jquery-ui.css" />
+			<link rel="text/javascript" href="../Public/jsregister.js" />
+			<link rel="text/javascript" href="../Public/public.js" />
+			<link rel="text/javascript" href="../Public/jquery.js" />
 			
 		</head>
 <body>
@@ -173,7 +175,9 @@
 				<span class="corner_left"></span>
 				<div class="lay_sider">
 					<div class="subsider">
+						<span class="border_line"></span>
 						<h3 class="video_all">全部</h3>
+						<span class="border_line"></span>
 						<ul>
 							<?php foreach($categories as $c) { ?>
 								<li class="each_video all">
@@ -251,6 +255,7 @@
 							<li class="each_video">
 								<a href="#">肩</a>
 							</li> -->
+							<span class="border_line"></span>
 						</ul>
 					</div>
 				</div>
@@ -312,7 +317,7 @@
 						<ul class="new_video clearfix">
 							<?php foreach($articles as $a) { ?>
 							<li class="tr_classify">
-								<a href="/index.php?app=index&mod=Index&act=articleDetail&id=<?php echo ($a['id']); ?>" class="video_1"><img src="<?php echo ($SITE_URL); ?>/public/images/article/<?php echo ($a['img']); ?>" width="165px" height="134px" alt=""></a>
+								<a href="/index.php?app=index&mod=Index&act=articleDetail&id=<?php echo ($a['id']); ?>" class="video_1"><img src="<?php echo ($SITE_URL); ?>/apps/index/Tpl/default/public/images/training/<?php echo ($a['img']); ?>" width="165px" height="134px" alt=""></a>
 								<a href="#" class="plan_article_tl"><?php echo ($a['title']); ?></a>
 								<p class="summary"><?php echo ($a['brief']); ?>
 								</p>

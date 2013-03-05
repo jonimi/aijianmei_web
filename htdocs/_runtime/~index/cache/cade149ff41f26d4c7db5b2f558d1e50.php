@@ -206,7 +206,7 @@
 					<div class="lay_top clearfix">
 						<h1 class="public_title">最精彩的营养文章</h1>
 						<div class="tr_top clearfix">
-							<a href="article.html" class="store.html"><img src="images/nutri/01.jpg" alt="no" class="supple_pic" /></a>
+							<a href="article.html" class="store.html"><img src="../Public/images/nutri/01.jpg" alt="no" class="supple_pic" /></a>
 							<div>
 								<a href="article.html" class="detail">营养与饮食秘诀</a>
 								<p>有一个好的饮食规划才会有一副有成就感的身材</p>
@@ -217,7 +217,7 @@
 							<li class="classify">
 								<a href="classify.html" class="lay_cf">
 									
-										<img src="images/nutri/03.jpg" alt="" class="best" />
+										<img src="../Public/images/nutri/03.jpg" alt="" class="best" />
 										<p>最畅销分类一：XX蛋白粉</p>
 										<p class="price"></p>
 									
@@ -226,7 +226,7 @@
 							<li class="classify">
 								<a href="classify.html" class="lay_cf">
 									<div>
-										<img src="images/nutri/04.jpg" alt="" class="best" />
+										<img src="../Public/images/nutri/04.jpg" alt="" class="best" />
 										<p>最畅销分类一：XX蛋白粉</p>
 										<p class="price"></p>
 									</div>
@@ -235,7 +235,7 @@
 							<li class="classify">
 								<a href="classify.html" class="lay_cf">
 									<div>
-										<img src="images/nutri/05.jpg" alt="" class="best" />
+										<img src="../Public/images/nutri/05.jpg" alt="" class="best" />
 										<p>最畅销分类一：XX蛋白粉</p>
 										<p class="price"></p>
 									</div>
@@ -252,70 +252,70 @@
 						<h1 class="public_title">最佳十篇文章</h1>
 						<ul>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/06.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/06.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/07.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/07.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/06.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/06.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/07.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/07.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
@@ -333,70 +333,70 @@
 						<h1 class="public_title">最近补充品文章</h1>
 						<ul>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/06.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/06.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/07.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/07.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a href="article.html" class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/06.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/06.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/07.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/07.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>
 								</div>
 							</li>
 							<li class="article clearfix">
-								<a href="article.html" class="article_pic"><img src="images/add/05.jpg" alt="no" /></a>
+								<a href="article.html" class="article_pic"><img src="../Public/images/add/05.jpg" alt="no" /></a>
 								<div class="article_content">
 									<a class="title_3">5 healthy lunch ideas</a>
 									<p>dont ieave your child's nutnition up to wonding machines and piayfore trades serd him ir</p>

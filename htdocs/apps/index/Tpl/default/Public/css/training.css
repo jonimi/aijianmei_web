@@ -1,4 +1,4 @@
-/***********************content开始*************************/
+﻿/***********************content开始*************************/
 	/*#banner切换图片独立部分*/
 	#banner{
 		padding-top: 10px;
@@ -38,6 +38,7 @@
 			.tr_classify{
 				float: left;
 				width: 165px;
+				height:280px;
 				margin:0 9px 5px 0;
 				border:3px solid transparent;
 			}
