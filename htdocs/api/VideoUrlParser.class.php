@@ -149,21 +149,25 @@ class VideoUrlParser
      * http://player.youku.com/player.php/sid/XMjU0NjI2Njg4/v.swf
      */ 
     private function _parseYouku($url){
-        preg_match("#id\_(\w+)#", $url, $matches);
-
+        //preg_match("#id\_(\w+)#", $url, $matches);
+    	preg_match("/id\_(\w+)/", $url, $matches);
+        //print_r($matches);
         if (empty($matches)){
             preg_match("#v_playlist\/#", $url, $mat);
             if(!$mat) return false;
-
+            
             $html = self::_fget($url);
 
             preg_match("#videoId2\s*=\s*\'(\w+)\'#", $html, $matches);
             if(!$matches) return false;
         }
+        
+        
 
         $link = "http://v.youku.com/player/getPlayList/VideoIDS/{$matches[1]}/timezone/+08/version/5/source/out?password=&ran=2513&n=3";
 
         $retval = self::_cget($link);
+        
         if ($retval) {
             $json = json_decode($retval, true);
 
@@ -176,6 +180,36 @@ class VideoUrlParser
         } else {
             return false;
         }
+    }
+    
+    private function fopen_url($url) {
+    	
+    		if (function_exists('file_get_contents')) {
+    			
+    			$file_content = @file_get_contents($url);
+    			var_dump($file_content);
+    		} elseif (ini_get('allow_url_fopen') && ($file = @fopen($url, 'rb'))){
+    			
+    			$i = 0;
+    			while (!feof($file) && $i++ < 1000) {
+    				$file_content .= strtolower(fread($file, 4096));
+    			}
+    			fclose($file);
+    		} elseif (function_exists('curl_init')) {
+    			
+    			$curl_handle = curl_init();
+    			curl_setopt($curl_handle, CURLOPT_URL, $url);
+    			curl_setopt($curl_handle, CURLOPT_CONNECTTIMEOUT,2);
+    			curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER,1);
+    			curl_setopt($curl_handle, CURLOPT_FAILONERROR,1);
+    			curl_setopt($curl_handle, CURLOPT_USERAGENT, 'Trackback Spam Check'); //引用垃圾邮件检查
+    			$file_content = curl_exec($curl_handle);
+    			curl_close($curl_handle);
+    		} else {
+    			$file_content = '';
+    		}
+    		return $file_content;
+    	
     }
 
     /**
@@ -426,8 +460,9 @@ HEADER;
      * 通过 curl 获取内容
      */
     private function _cget($url='', $user_agent=''){
+    	
         if(!$url) return;
-
+        
         $user_agent = $user_agent ? $user_agent : self::USER_AGENT;
 
         $ch = curl_init();
@@ -437,7 +472,8 @@ HEADER;
 
         ob_start();
         curl_exec($ch);
-        $html = ob_get_contents();        
+        $html = ob_get_contents();  
+           
         ob_end_clean();
 
         if(curl_errno($ch)){
