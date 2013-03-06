@@ -486,7 +486,6 @@
 	.other_fans{
 		width:360px;
 		float:right;
-		border:1px solid #ccc;
 	}
 		.other_top{
 			background: #F7F7F7;
@@ -511,14 +510,14 @@
 			.others_title{
 				position: absolute;
 				top: -10px;
-				background: white;
+				background: #FAFAFA;
 				padding-right: 5px;			
 			}
 			.others .re_more{
 				position: absolute;
 				right: 0;
 				top: -10px;
-				background: white;
+				background: #FAFAFA;
 				padding-left: 5px;	
 				font-size:13px;
 				color:#0079B7;
@@ -538,9 +537,9 @@
 					}
 	
 		.scanning{
-			padding:0 20px;
-			border-top: 1px solid #F3EFE3;
-			background:#F8F5E9;
+			background: white;
+			border: 1px solid #E0E0E0;
+			margin: 10px;
 		}
 			.scan{
 				float:left;
